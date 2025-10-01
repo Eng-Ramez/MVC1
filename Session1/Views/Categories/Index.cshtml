@@ -1,0 +1,12 @@
+﻿<!DocType <html>
+    <head><title>MVC1</title></head>
+    <body>
+        <h1>Categories</h1>
+
+    @foreach(var item in @Model)
+    {
+        <h4>@item.Name <a href="/Categories/details/@item.Id">details</a></h4>
+    }
+
+    </body>
+</html>
