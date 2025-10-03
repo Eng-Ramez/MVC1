@@ -2,11 +2,19 @@
     <head><title>MVC1</title></head>
     <body>
         <h1>Categories</h1>
-
+        <a href="/Categories/Create">Create</a>
+    <ul>
     @foreach(var item in @Model)
     {
-        <h4>@item.Name <a href="/Categories/details/@item.Id">details</a></h4>
+        <li>
+           @item.Name
+           <a href="/Categories/details/@item.Id" class="text-success">details</a>
+           <a href="/Categories/delete/@item.Id" class="text-danger">delete</a>
+           <a href="/Categories/Edit/@item.Id" class="text-info">Edit</a>
+        </li> 
     }
+    </ul>
+       
 
     </body>
 </html>

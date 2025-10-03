@@ -1,0 +1,14 @@
+﻿@model Category
+<form method="post" action="/Categories/Add">
+    <div>
+    <label for="CatName" class="form-label"></label>
+    <input type="text" name="Name" class="form-control" value="@Model.Name" id="CatName" placeholder="Enter Category Name...">
+        <span class="text-danger" asp-validation-for="Name"></span>
+        <label for="CatDescription" class="form-label"></label>
+        <input type="text" name="Description" class="form-control" value="@Model.Description" id="CatDescription" placeholder="Enter Category Description...">
+        <span class="text-danger" asp-validation-for="Description"></span>
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary">Save</button>
+</form>
+
